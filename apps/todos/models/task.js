@@ -11,7 +11,13 @@
   @extends SC.Record
   @version 0.1
 */
-Todos.Task = SC.Record.extend(
+
+
+// App.Rails.Record = SC.Record.extend({
+//   primaryKey : "id" // Extend your records from App.Rails.Record instead of SC.Record.
+// });
+
+Todos.Task = App.Rails.Record.extend(
 /** @scope Todos.Task.prototype */ {
 
   // TODO: Add your own code here.

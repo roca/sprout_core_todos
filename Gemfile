@@ -3,3 +3,5 @@ gem "sproutcore", :git => "git://github.com/sproutcore/abbot.git"
 # if you want to use a version of abbot already checked out into your system rather than the remote repository
 # gem "sproutcore", :path => "/path/to/abbot"
 
+
+
