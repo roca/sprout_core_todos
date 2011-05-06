@@ -55,7 +55,10 @@ def edit
   # POST /tasks
   # POST /tasks.xml
 def create
-    @task = Task.new(params[:task])
+  
+
+       
+    @task = Task.new(:description=>params[:description], :isDone=>params[:isDone])
 
     respond_to do |format|
       if @task.save
@@ -76,10 +79,17 @@ def create
   # PUT /tasks/1
   # PUT /tasks/1.xml
 def update
+  
+   # if params[:task] && params[:task][:isDone]
+   #     params[:task][:isDone] = 1
+   #   else
+   #      params[:task][:isDone] = 0
+   #   end
+   
     @task = Task.find(params[:id])
 
     respond_to do |format|
-      if @task.update_attributes(params[:task])
+      if @task.update_attributes(:description=>params[:description], :isDone=>params[:isDone])
         format.html { redirect_to(@task, :notice => 'Task was successfully updated.') }
         format.xml  { head :ok }
         format.json do
